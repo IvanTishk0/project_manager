@@ -1,11 +1,16 @@
-import React from "react";
 import { useState } from 'react'
-import './App.css'
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import './styles/App.css'
+import HelloPage from "./pages/helloPage.tsx";
 
 function App() {
 
   return (
-
+    <div className="App">
+        <HelloPage/>
+    </div>
   );
 }
 
