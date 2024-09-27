@@ -1,0 +1,35 @@
+/* RegistrationForm.css */
+.registration-form-container {
+    width: 500px;
+    padding: 50px;
+    border: 1px solid #CC00CC;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(204, 0, 204, 0.6);
+    color: white;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #fff;
+    margin-bottom: 15px;
+}
+
+.submit-button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.link-text {
+    text-decoration: none;
+    color: white;
+    padding-top: 30px;
+    margin-bottom: 0;
+}
+
+.link-text a {
+    cursor: pointer;
+}
+
+.is-invalid {
+     border: 2px solid red;
+ }
