@@ -33,3 +33,15 @@
   border: 1px solid rgba(204, 0, 204, 0.6);
   /*background-color: #404040;*/
 }
+
+.offcanvas__border{
+  box-shadow: 1px 1px 10px rgba(204, 0, 204, 0.6);
+}
+
+.offcanvas__btn{
+
+}
+
+.offcanvas__btn:hover{
+  border: 1px solid rgba(204, 0, 204, 0.6);
+}
