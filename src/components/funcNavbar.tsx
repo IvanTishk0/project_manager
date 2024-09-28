@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import Icon from "@mdi/react";
 import {mdiMenu, mdiPlus} from "@mdi/js";
-import {Button, ListGroup, Navbar, Offcanvas} from "react-bootstrap";
+import {Button, ListGroup, Modal, Navbar, Offcanvas} from "react-bootstrap";
+import CreateTable from "./UI/createTable.tsx";
 
 const FuncNavbar = () => {
     const [show, setShow] = useState(false);
@@ -19,8 +20,7 @@ const FuncNavbar = () => {
         e.preventDefault();
         setShow(true);
     }
-
-    let counterid = 0
+    const [modalShow, setModalShow] = React.useState(false);
     return (
         <Navbar
             bg="dark"
@@ -50,7 +50,7 @@ const FuncNavbar = () => {
                 <Button
                     className="rounded-5 m-2"
                     variant="dark"
-                    href=""
+                    onClick={() => setModalShow(true)}
                 >
 
                     <Icon path={mdiPlus} size={1} />
@@ -85,7 +85,12 @@ const FuncNavbar = () => {
                     )}
                 </Offcanvas.Body>
             </Offcanvas>
+        <CreateTable
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+        />
         </Navbar>
+
 
     );
 };
