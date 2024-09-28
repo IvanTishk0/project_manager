@@ -1,0 +1,20 @@
+.projectCard {
+    color: white;
+}
+
+.card-header {
+    border: 0;
+}
+
+.flex-fill {
+    width: 33.333%;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.list-group-item {
+    background-color: #121212;
+    color: white;
+    padding: 10px;
+}

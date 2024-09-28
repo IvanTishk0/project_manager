@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route, useHistory} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import React, {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -10,7 +10,7 @@ import MainPage from "./pages/mainPage.tsx";
 
 const App: React.FC = () => {
 
-    const [userData, setUserData] = useState([
+    const [userData] = useState([
         {id: 1, name: 'petya', email: 'peya@mail.ru', password: '12345'},
         {id: 2, name: 'artem', email: 'artem@mail.ru', password: '54321'},
         {id: 3, name: 'danil', email: 'danil@mail.ru', password: 'qwerety'},
@@ -22,7 +22,7 @@ const App: React.FC = () => {
           <div className="App">
               <Routes>
                   <Route path="/" element={<HelloPage />} />
-                  <Route path="/login" element={<LogInPage value={userData} />} />
+                  <Route path="/login" element={<LogInPage userData={userData} />} />
                   <Route path="/registration" element={<RegistrationPage value={userData}/>} />
                   <Route path="/user" element={<MainPage />} />
               </Routes>

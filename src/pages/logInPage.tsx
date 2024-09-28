@@ -4,12 +4,24 @@ import '../styles/LogInForm.css';
 import LoginForm from "../components/loginForm.tsx";
 import NonFuncNavbar from "../components/nonFuncNavbar.tsx";
 
-const LogInPage: React.FC = (props) => {
+interface User {
+    id: number;
+    name: string;
+    email: string;
+    password: string;
+}
+
+// LogInPage принимает props
+interface LogInPageProps {
+    userData: User[];
+}
+
+const LogInPage: React.FC<LogInPageProps> = ({ userData }) => {
     return (
         <div className="App">
-            <NonFuncNavbar/>
+            <NonFuncNavbar />
             <div className="d-flex justify-content-center mt-5">
-                <LoginForm value={props} />
+                <LoginForm userData={userData} />
             </div>
         </div>
     );

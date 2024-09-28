@@ -1,17 +1,11 @@
 import React, {useState} from 'react';
 import Icon from "@mdi/react";
 import {mdiMenu, mdiPlus} from "@mdi/js";
-import {Button, ListGroup, Modal, Navbar, Offcanvas} from "react-bootstrap";
+import {Button, ListGroup, Navbar, Offcanvas} from "react-bootstrap";
 import CreateTable from "./UI/createTable.tsx";
 
-const FuncNavbar = () => {
+const FuncNavbar = ({ projects, setCurrentProject }) => {
     const [show, setShow] = useState(false);
-    const [projects, setProjects] = useState([
-        {id: 1, name: 'project 1'},
-        {id: 2, name: 'project 2'},
-        {id: 3, name: 'project 3'},
-        {id: 4, name: 'project 4'}
-    ]);
     const handleClose = () => {
         // e.preventDefault();
         setShow(false);
@@ -29,22 +23,22 @@ const FuncNavbar = () => {
         >
             <div>
 
-                    <Navbar.Brand
-                        className="mx-2 d-flex align-items-center"
+                <Navbar.Brand
+                    className="mx-2 d-flex align-items-center"
+                    href=""
+                >
+                    <Button
+                        onClick={handleShow}
+                        className="rounded-5"
+                        variant="dark"
                         href=""
                     >
-                        <Button
-                            onClick={handleShow}
-                            className="rounded-5"
-                            variant="dark"
-                            href=""
-                        >
 
-                            <Icon path={mdiMenu} size={1} />
-                        </Button>
+                        <Icon path={mdiMenu} size={1} />
+                    </Button>
 
-                        PROJECT 4617
-                    </Navbar.Brand>
+                    PROJECT 4617
+                </Navbar.Brand>
             </div>
             <div>
                 <Button
@@ -85,13 +79,11 @@ const FuncNavbar = () => {
                     )}
                 </Offcanvas.Body>
             </Offcanvas>
-        <CreateTable
-            show={modalShow}
-            onHide={() => setModalShow(false)}
-        />
+            <CreateTable
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
         </Navbar>
-
-
     );
 };
 
