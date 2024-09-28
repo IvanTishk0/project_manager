@@ -1,7 +1,7 @@
 import React from 'react';
 import FuncNavbar from "../components/funcNavbar.tsx";
 
-const MainPage = () => {
+const MainPage: React.FC = () => {
     return (
         <div className="App w-100">
             <FuncNavbar/>

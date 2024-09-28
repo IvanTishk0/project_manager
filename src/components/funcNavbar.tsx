@@ -9,7 +9,7 @@ const FuncNavbar = () => {
         {id: 1, name: 'project 1'},
         {id: 2, name: 'project 2'},
         {id: 3, name: 'project 3'},
-        {id: 4, name: 'project 3'}
+        {id: 4, name: 'project 4'}
     ]);
     const handleClose = () => {
         // e.preventDefault();

@@ -1,0 +1,32 @@
+/* RegistrationForm.css */
+.login-form-container {
+    width: 500px;
+    padding: 50px;
+    border: 1px solid #CC00CC;
+    border-radius: 50px;
+    background-color: #404040;
+    box-shadow: 0 4px 8px rgba(204, 0, 204, 0.6);
+    color: white;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #fff;
+    margin-bottom: 15px;
+}
+
+.submit-button {
+    border: 1px solid #fff;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.link-text {
+    color: white;
+    padding-top: 30px;
+    margin-bottom: 0;
+}
+
+.link-text a {
+    cursor: pointer;
+}

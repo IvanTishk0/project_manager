@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Card, Container} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 const InfoCard = () => {
     return (
@@ -28,16 +29,15 @@ const InfoCard = () => {
                 <Container className="mt-5 d-flex justify-content-between align-items-center">
                     <Button
                         className="w-50 rounded-3 mx-2"
-                        variant="outline-light" >
+                        variant="outline-light"
+                        as={Link} to="/login"
+                    >
                         Войти
-                        {/*<Icon*/}
-                        {/*    className="pl-10"*/}
-                        {/*    path={mdiAccountPlus}*/}
-                        {/*    size={1} />*/}
                     </Button>
                     <Button
                         className="w-50 rounded-3 mx-2"
                         variant="outline-light"
+                        as={Link} to="/registration"
                     >
                         Регистрация
                     </Button>
