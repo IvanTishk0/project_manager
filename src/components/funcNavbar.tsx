@@ -72,8 +72,12 @@ const FuncNavbar = ({ projects, setCurrentProject }) => {
                             <ListGroup.Item
                                 action href=""
                                 className="offcanvas__btn bg-dark text-light m-2 text-center"
+                                onClick={() => {
+                                    setCurrentProject(project);
+                                    handleClose(); // Закрыть боковую панель после выбора проекта
+                                }}
                             >
-                                {project.name}
+                                {project.title}
                             </ListGroup.Item>
                         </ListGroup>
                     )}
