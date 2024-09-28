@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/RegistrationForm.css';
 import { useNavigate } from "react-router-dom";
 
-const RegFrom = () => {
+const RegFrom = (props) => {
     const [formData, setFormData] = useState({
         username: '',
         email: '',
