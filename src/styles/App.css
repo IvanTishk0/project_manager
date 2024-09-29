@@ -45,3 +45,17 @@
 .offcanvas__btn:hover{
   border: 1px solid rgba(204, 0, 204, 0.6);
 }
+
+.card__modified{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  /*background-color: #404040;*/
+}
+
+.card__text__content{
+  max-width: 60%;
+}
+
+.btn__card{
+  max-height: 30px;
+}

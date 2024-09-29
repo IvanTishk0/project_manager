@@ -4,10 +4,10 @@ import {mdiMenu, mdiPlus} from "@mdi/js";
 import {Button, ListGroup, Navbar, Offcanvas} from "react-bootstrap";
 import CreateTable from "./UI/createTable.tsx";
 
-const FuncNavbar = ({ projects, setCurrentProject }) => {
+
+const FuncNavbar = ({ projects, setCurrentProject, addProject }) => {
     const [show, setShow] = useState(false);
     const handleClose = () => {
-        // e.preventDefault();
         setShow(false);
     }
     const handleShow = (e) => {
@@ -85,7 +85,7 @@ const FuncNavbar = ({ projects, setCurrentProject }) => {
             </Offcanvas>
             <CreateTable
                 show={modalShow}
-                onHide={() => setModalShow(false)}
+                onHide={() => setModalShow(false)} addProject={addProject}
             />
         </Navbar>
     );

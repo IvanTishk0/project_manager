@@ -24,6 +24,17 @@ const MainPage: React.FC = () => {
         }
     ]);
 
+    const addProject = (newProjectTitle: string, newProjectBody: string) => {
+        const newProject = {
+            id: projects.length + 1,
+            title: newProjectTitle || `Проект ${projects.length + 1}`,
+            description: `Описание: ${newProjectBody || `проекта ${projects.length + 1}`}`,
+            tasks: []
+        };
+        setProjects([...projects, newProject]);
+        setCurrentProject(newProject);
+    };
+
     const [currentProject, setCurrentProject] = useState(projects[0]);
 
     const handleTasksUpdate = (updatedTasks: Task[]) => {
@@ -36,7 +47,10 @@ const MainPage: React.FC = () => {
 
     return (
         <div className="App w-100">
-            <FuncNavbar projects={projects} setCurrentProject={setCurrentProject} />
+            <FuncNavbar projects={projects}
+                        setCurrentProject={setCurrentProject}
+                        addProject={addProject}
+            />
             {currentProject && <ProjectCard
                 key={currentProject.id}
                 title={currentProject.title}
